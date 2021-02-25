@@ -7,7 +7,8 @@ function getData(){
   let sidePlate = data[3].value
   let topPlate = data[4].value
   let bottomPlate = data[5].value
-  let noOfBeams = data[6].value
+  let squareSize = data[6].value
+  let noOfBeams = data[7].value
 
   // Mass Calculations For Beams
 
@@ -23,7 +24,10 @@ function getData(){
   var noOfRibs = Math.floor(span / 1000 * 1.5)
   var ribsMass = sidePlate * (height / 1000) * (width / 1000) * 7.85 * noOfRibs
 
-  var totalMass = parseFloat(((sidePlateMass + topPlateMass + bottomPlateMass + ribsMass) * noOfBeams).toFixed(3));
+  // Square ribsMass
+  var squareMass = squareSize * squareSize * span * 7.85 / 1000000
+
+  var totalMass = parseFloat(((sidePlateMass + topPlateMass + bottomPlateMass + ribsMass + squareMass) * noOfBeams).toFixed(3));
 
   document.getElementById('resultSpan').innerHTML = "Total Weight of Beam = " + totalMass + " kg";
 
