@@ -10,65 +10,71 @@
   </head>
   <body>
     <div class="header">
-      <h1>Crane Weight Calculations</h1>
+      <h1>CRANE MAC - Weight Calculations</h1>
       <p><strong>Fill All Dimensions in mm</strong></p>
     </div>
 
+    <div>
 
-    <div class="spanDiv">
+
+    <div class="mainDiv">
       <form id="spanArea" method="post">
         <h2>Fill Dimensions of Beams</h2>
         <label >Enter Span</label>
-        <input type="text" name="span" >
+        <input type="text" name="span" ><br>
         <label >Enter Height</label>
-        <input type="text" name="height" >
+        <input type="text" name="height" ><br>
         <label >Enter Width</label>
         <input type="text" name="width" ><br>
         <label >Side Plate size</label>
-        <input type="text" name="sidePlate" value="">
+        <input type="text" name="sidePlate" value=""><br>
         <label >Top Plate</label>
-        <input type="text" name="topPlate" value="">
+        <input type="text" name="topPlate" value=""><br>
         <label >Bottom Plate</label>
         <input type="text" name="bottomPlate" value=""><br>
         <label >Square Size</label>
-        <input type="text" name="square" value="">
+        <input type="text" name="square" value=""><br>
         <label >No. of Beams</label>
-        <input type="text" name="noOfBeams" value="">
+        <input type="text" name="noOfBeams" value=""><br>
 
 
-        <button class="btn btn-dark" type="button" onclick="getData()" name="button">Calculate</button>
+        <button class="btn btn-dark" type="button" onclick="getData()" name="button">Calculate</button><br>
 
       </form>
 
-      <p id="resultSpan">Total Weight of Beams will be shown here.</p>
+      <p id="resultSpan" class="result">Total Weight of Beams will be shown here.</p>
     </div>
 
 
-      <div class="ecDiv">
+      <div class="mainDiv">
         <form id="ECArea" method="post">
           <h2>Fill Dimensions of End Carriages</h2>
           <label >Enter Span</label>
-          <input type="text" name="spanEC" >
+          <input type="text" name="spanEC" ><br>
           <label >Enter Height</label>
-          <input type="text" name="heightEC" >
+          <input type="text" name="heightEC" ><br>
           <label >Enter Width</label>
           <input type="text" name="widthEC" ><br>
           <label >Side Plate size</label>
-          <input type="text" name="sidePlateEC" value="">
+          <input type="text" name="sidePlateEC" value=""><br>
           <label >Top Plate</label>
-          <input type="text" name="topPlateEC" value="">
+          <input type="text" name="topPlateEC" value=""><br>
           <label >Bottom Plate</label>
           <input type="text" name="bottomPlateEC" value=""><br>
-          <label >No. of End Carriages</label>
-          <input type="text" name="noOfEC" value="">
+          <label >No. of End Carriages </label>
+          <input type="text" name="noOfEC" value=""><br>
+          <label >Wheel Center (optional)</label>
+          <input type="text" name="wheelDia" value=""><br>
 
 
           <button class="btn btn-dark" type="button" onclick="getDataEC()" name="button2">Calculate</button>
 
         </form>
-        <p id="resultEC">Total Weight of End Carriages will be shown here.</p>
+        <p id="resultEC" class="result">Total Weight of End Carriages will be shown here.</p>
       </div>
 
+
+    </div>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
