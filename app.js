@@ -25,7 +25,11 @@ function getData(){
 
   var totalMass = parseFloat(((sidePlateMass + topPlateMass + bottomPlateMass + ribsMass) * noOfBeams).toFixed(3));
 
-  document.getElementById('resultSpan').innerHTML = "Total Weight is " + totalMass + " kg";
+  document.getElementById('resultSpan').innerHTML = "Total Weight of Beam = " + totalMass + " kg";
+
+  for (var i = 0; i < 5; i++) {
+
+  }
 }
 
 function getDataEC(){
@@ -54,5 +58,5 @@ function getDataEC(){
 
   var totalMassEC = parseFloat(((sidePlateMassEC + topPlateMassEC + bottomPlateMassEC + ribsMassEC) * noOfEC).toFixed(3));
 
-  document.getElementById('resultEC').innerHTML = "Total Weight is " + totalMassEC + " kg";
+  document.getElementById('resultEC').innerHTML = "Total Weight of End Carriages = " + totalMassEC + " kg";
 }
