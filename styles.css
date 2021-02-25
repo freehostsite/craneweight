@@ -1,9 +1,30 @@
 
 body {
-  background-color: #8ac4d0;
+  background-color: #e6d5b8;
   text-align: center;
+  font-family: Montserrat;
+  color: #4a47a3;
 }
 input {
   width: 100px;
   margin: 10px 20px;
+}
+
+h1 {
+  font-weight: bold;
+}
+h2 {
+  font-weight: bold;
+}
+p {
+  font-weight: bold;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.header {
+  padding: 3% 0 2%;
 }
