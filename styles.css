@@ -1,13 +1,17 @@
 
 body {
-  background-color: #e6d5b8;
+  background-color: #eff0b6;
+  /* background-color: #aa2b1d; */
   text-align: center;
   font-family: Montserrat;
-  color: #4a47a3;
+  /* color: #4a47a3; */
+  color: #aa2b1d;
 }
 input {
   width: 100px;
-  margin: 10px 20px;
+  margin: 5px 20px;
+  background-color: #fff9b0;
+  text-align: left;
 }
 
 h1 {
@@ -15,6 +19,7 @@ h1 {
 }
 h2 {
   font-weight: bold;
+  font-size: 1.5rem;
 }
 p {
   font-weight: bold;
@@ -26,5 +31,15 @@ label {
 }
 
 .header {
-  padding: 3% 0 2%;
+  padding: 3% 0 0;
+}
+
+.mainDiv {
+  display: inline-block;
+  text-align: left;
+  margin: 0 3%;
+}
+
+.result {
+  margin-top: 8px;
 }
