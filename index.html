@@ -21,21 +21,21 @@
       <form id="spanArea" method="post">
         <h2>Fill Dimensions of Beams</h2>
         <label >Enter Span         </label>
-        <input type="text" name="span" placeholder="(in mm)" ><br>
+        <input type="number" name="span" placeholder="(in mm)" ><br>
         <label >Enter Height</label>
-        <input type="text" name="height" placeholder="(in mm)" ><br>
+        <input type="number" name="height" placeholder="(in mm)" ><br>
         <label >Enter Width</label>
-        <input type="text" name="width" placeholder="(in mm)" ><br>
+        <input type="number" name="width" placeholder="(in mm)" ><br>
         <label >Side Plate size</label>
-        <input type="text" name="sidePlate" placeholder="(in mm)" value=""><br>
+        <input type="number" name="sidePlate" placeholder="(in mm)" value=""><br>
         <label >Top Plate</label>
-        <input type="text" name="topPlate" placeholder="(in mm)" value=""><br>
+        <input type="number" name="topPlate" placeholder="(in mm)" value=""><br>
         <label >Bottom Plate</label>
-        <input type="text" name="bottomPlate" placeholder="(in mm)" value=""><br>
+        <input type="number" name="bottomPlate" placeholder="(in mm)" value=""><br>
         <label >Square Size</label>
-        <input type="text" name="square" placeholder="(in mm)" value=""><br>
+        <input type="number" name="square" placeholder="(in mm)" value=""><br>
         <label >No. of Beams</label>
-        <input type="text" name="noOfBeams" value=""><br>
+        <input type="number" name="noOfBeams" value=""><br>
 
 
         <button class="btn btn-dark" type="button" onclick="getData()" name="button">Calculate</button><br>
@@ -50,21 +50,21 @@
         <form id="ECArea" method="post">
           <h2>Fill Dimensions of End Carriages</h2>
           <label >Enter Span</label>
-          <input type="text" name="spanEC" placeholder="(in mm)" ><br>
+          <input type="number" name="spanEC" placeholder="(in mm)" ><br>
           <label >Enter Height</label>
-          <input type="text" name="heightEC" placeholder="(in mm)" ><br>
+          <input type="number" name="heightEC" placeholder="(in mm)" ><br>
           <label >Enter Width</label>
-          <input type="text" name="widthEC" placeholder="(in mm)" ><br>
+          <input type="number" name="widthEC" placeholder="(in mm)" ><br>
           <label >Side Plate size</label>
-          <input type="text" name="sidePlateEC" placeholder="(in mm)" value=""><br>
+          <input type="number" name="sidePlateEC" placeholder="(in mm)" value=""><br>
           <label >Top Plate</label>
-          <input type="text" name="topPlateEC" placeholder="(in mm)" value=""><br>
+          <input type="number" name="topPlateEC" placeholder="(in mm)" value=""><br>
           <label >Bottom Plate</label>
-          <input type="text" name="bottomPlateEC" placeholder="(in mm)" value=""><br>
+          <input type="number" name="bottomPlateEC" placeholder="(in mm)" value=""><br>
           <label >No. of End Carriages </label>
-          <input type="text" name="noOfEC" value=""><br>
+          <input type="number" name="noOfEC" value=""><br>
           <label >Wheel Center (optional)</label>
-          <input type="text" name="wheelDia" placeholder="(in mm)" value=""><br>
+          <input type="number" name="wheelDia" placeholder="(in mm)" value=""><br>
 
 
           <button class="btn btn-dark" type="button" onclick="getDataEC()" name="button2">Calculate</button>
@@ -77,13 +77,13 @@
         <form id="trolleyArea" method="post">
           <h2>Fill Dimensions of Trolley</h2>
           <label >Enter Length</label>
-          <input type="text" name="lengthTrolley" placeholder="(in mm)" ><br>
+          <input type="number" name="lengthTrolley" placeholder="(in mm)" ><br>
           <label >Enter Width</label>
-          <input type="text" name="widthTrolley" placeholder="(in mm)" ><br>
+          <input type="number" name="widthTrolley" placeholder="(in mm)" ><br>
           <label >Enter Channel Size</label>
-          <input type="text" name="channelTrolley" placeholder="(in mm)" ><br>
+          <input type="number" name="channelTrolley" placeholder="(in mm)" ><br>
           <label >Chequered Plate size</label>
-          <input type="text" name="chqPlate" placeholder="(in mm)" value=""><br>
+          <input type="number" name="chqPlate" placeholder="(in mm)" value=""><br>
 
           <button class="btn btn-dark" type="button" onclick="getDataTrolley()" name="button3">Calculate</button>
 
