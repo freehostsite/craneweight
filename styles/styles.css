@@ -75,5 +75,10 @@ label {
 @media (max-width: 990px) {
   .header {
     width: 540px;
+    text-align: left;
+    margin-left: 6%;
+  }
+  .mainDiv {
+    margin-left: 0;
   }
 }
