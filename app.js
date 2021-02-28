@@ -1,14 +1,19 @@
+// Calculations for Beams
 
-function getData(){
+function getData() {
+
+  // Data Collecting
+
   let data = $("#spanArea").serializeArray();
-  let span = data[0].value
-  let height = data[1].value
-  let width = data[2].value
-  let sidePlate = data[3].value
-  let topPlate = data[4].value
-  let bottomPlate = data[5].value
-  let squareSize = data[6].value
-  let noOfBeams = data[7].value
+  let span = Number(data[0].value)
+  let height = Number(data[1].value)
+  let width = Number(data[2].value)
+  let sidePlate = Number(data[3].value)
+  let topPlate = Number(data[4].value)
+  let bottomPlate = Number(data[5].value)
+  let squareSize = Number(data[6].value)
+  let noOfBeams = Number(data[7].value)
+
 
   // Mass Calculations For Beams
 
@@ -27,24 +32,28 @@ function getData(){
   // Square ribsMass
   var squareMass = squareSize * squareSize * span * 7.85 / 1000000
 
+  // Total Mass
+
   var totalMass = parseFloat(((sidePlateMass + topPlateMass + bottomPlateMass + ribsMass + squareMass) * noOfBeams).toFixed(3));
 
   document.getElementById('resultSpan').innerHTML = "Total Weight of Beam = " + totalMass + " kg";
 
-  for (var i = 0; i < 5; i++) {
-
-  }
 }
 
-function getDataEC(){
+// Calculations for End Carriages
+
+function getDataEC() {
+
+  // Data Collecting
+
   let dataEC = $("#ECArea").serializeArray();
-  let spanEC = dataEC[0].value
-  let heightEC = dataEC[1].value
-  let widthEC = dataEC[2].value
-  let sidePlateEC = dataEC[3].value
-  let topPlateEC = dataEC[4].value
-  let bottomPlateEC = dataEC[5].value
-  let noOfEC = dataEC[6].value
+  let spanEC = Number(dataEC[0].value)
+  let heightEC = Number(dataEC[1].value)
+  let widthEC = Number(dataEC[2].value)
+  let sidePlateEC = Number(dataEC[3].value)
+  let topPlateEC = Number(dataEC[4].value)
+  let bottomPlateEC = Number(dataEC[5].value)
+  let noOfEC = Number(dataEC[6].value)
 
   // Mass Calculations For End Carriages
 
@@ -58,9 +67,71 @@ function getDataEC(){
 
   // Ribs Mass
   var noOfRibsEC = Math.floor(spanEC / 1000 * 2)
-  var ribsMassEC = sidePlateEC* (heightEC/ 1000) * (widthEC / 1000) * 7.85 * noOfRibsEC
+  var ribsMassEC = sidePlateEC * (heightEC / 1000) * (widthEC / 1000) * 7.85 * noOfRibsEC
+
+  // Total Mass
 
   var totalMassEC = parseFloat(((sidePlateMassEC + topPlateMassEC + bottomPlateMassEC + ribsMassEC) * noOfEC).toFixed(3));
 
   document.getElementById('resultEC').innerHTML = "Total Weight of End Carriages = " + totalMassEC + " kg";
+}
+
+// Calculations for Trolley
+
+function getDataTrolley() {
+
+  // Data Collecting
+
+  let dataTrolley = $("#trolleyArea").serializeArray();
+  let lengthTrolley = Number(dataTrolley[0].value)
+  let widthTrolley = Number(dataTrolley[1].value)
+  let channelTrolley = Number(dataTrolley[2].value)
+  let chqPlate = Number(dataTrolley[3].value)
+
+  var iBeamMassPerMtr = 0;
+
+  switch (channelTrolley) {
+    case 200:
+      iBeamMassPerMtr = 24.2
+      break;
+    case 250:
+      iBeamMassPerMtr = 37.3
+      break;
+    case 300:
+      iBeamMassPerMtr = 46
+      break;
+    case 350:
+      iBeamMassPerMtr = 52.4
+      break;
+    case 400:
+      iBeamMassPerMtr = 61.5
+      break;
+    case 450:
+      iBeamMassPerMtr = 72.4
+      break;
+    case 500:
+      iBeamMassPerMtr = 86.9
+      break;
+    default:
+    }
+
+    // Mass Of I beams
+    //  4 Pieces of length + 3 Pieces of (Width - 150)
+
+    var iBeamMass = ( ( lengthTrolley / 1000 * 4 ) + ( ( widthTrolley - 150 ) / 1000 * 3 ) ) * iBeamMassPerMtr
+
+    // ChequereD Plate Mass
+
+    var chqPlateMass = chqPlate * lengthTrolley / 1000 * widthTrolley / 1000 * 8.0833
+
+    // Foundation + Support Mass
+
+    var restTrolleyMass = (lengthTrolley + widthTrolley) / 20
+
+    // Total Mass
+
+    var totalMassTrolley = parseFloat((iBeamMass + chqPlateMass + restTrolleyMass).toFixed(3));
+
+     document.getElementById('resultTrolley').innerHTML = "Total Weight of Trolley = " + totalMassTrolley + " kg";
+
 }

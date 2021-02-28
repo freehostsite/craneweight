@@ -73,6 +73,24 @@
         <p id="resultEC" class="result">Total Weight of End Carriages will be shown here.</p>
       </div>
 
+      <div class="mainDiv">
+        <form id="trolleyArea" method="post">
+          <h2>Fill Dimensions of Trolley</h2>
+          <label >Enter Length</label>
+          <input type="text" name="lengthTrolley" ><br>
+          <label >Enter Width</label>
+          <input type="text" name="widthTrolley" ><br>
+          <label >Enter Channel Size</label>
+          <input type="text" name="channelTrolley" ><br>
+          <label >Chequered Plate size</label>
+          <input type="text" name="chqPlate" value=""><br>
+
+          <button class="btn btn-dark" type="button" onclick="getDataTrolley()" name="button3">Calculate</button>
+
+        </form>
+        <p id="resultTrolley" class="result">Total Weight of Trolley will be shown here.</p>
+      </div>
+
 
     </div>
 
