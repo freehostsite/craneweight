@@ -1,3 +1,7 @@
+// For Previous Results
+
+// let previousData = [];
+
 // Calculations for Beams
 
 function getData() {
@@ -38,6 +42,8 @@ function getData() {
 
   document.getElementById('resultSpan').innerHTML = "Total Weight of Beam = " + totalMass + " kg";
 
+  return totalMass;
+
 }
 
 // Calculations for End Carriages
@@ -74,6 +80,8 @@ function getDataEC() {
   var totalMassEC = parseFloat(((sidePlateMassEC + topPlateMassEC + bottomPlateMassEC + ribsMassEC) * noOfEC).toFixed(3));
 
   document.getElementById('resultEC').innerHTML = "Total Weight of End Carriages = " + totalMassEC + " kg";
+
+  return totalMassEC;
 }
 
 // Calculations for Trolley
@@ -113,25 +121,59 @@ function getDataTrolley() {
       iBeamMassPerMtr = 86.9
       break;
     default:
-    }
+  }
 
-    // Mass Of I beams
-    //  4 Pieces of length + 3 Pieces of (Width - 150)
+  // Mass Of I beams
+  //  4 Pieces of length + 3 Pieces of (Width - 150)
 
-    var iBeamMass = ( ( lengthTrolley / 1000 * 4 ) + ( ( widthTrolley - 150 ) / 1000 * 3 ) ) * iBeamMassPerMtr
+  var iBeamMass = ((lengthTrolley / 1000 * 4) + ((widthTrolley - 150) / 1000 * 3)) * iBeamMassPerMtr
 
-    // ChequereD Plate Mass
+  // ChequereD Plate Mass
 
-    var chqPlateMass = chqPlate * lengthTrolley / 1000 * widthTrolley / 1000 * 8.0833
+  var chqPlateMass = chqPlate * lengthTrolley / 1000 * widthTrolley / 1000 * 8.0833
 
-    // Foundation + Support Mass
+  // Foundation + Support Mass
 
-    var restTrolleyMass = (lengthTrolley + widthTrolley) / 20
+  var restTrolleyMass = (lengthTrolley + widthTrolley) / 20
 
-    // Total Mass
+  // Total Mass
 
-    var totalMassTrolley = parseFloat((iBeamMass + chqPlateMass + restTrolleyMass).toFixed(3));
+  var totalMassTrolley = parseFloat((iBeamMass + chqPlateMass + restTrolleyMass).toFixed(3));
 
-     document.getElementById('resultTrolley').innerHTML = "Total Weight of Trolley = " + totalMassTrolley + " kg";
+  document.getElementById('resultTrolley').innerHTML = "Total Weight of Trolley = " + totalMassTrolley + " kg";
+
+  return totalMassTrolley;
+
+}
+
+function finalWeight() {
+
+  // For Previous Results
+
+  // if (getData() != 0) {
+  //   previousData.push(getData())
+  // }
+  // if (getDataEC() != 0) {
+  //   previousData.push(getDataEC())
+  // }
+  // if (getDataTrolley() != 0) {
+  //   previousData.push(getDataTrolley())
+  // }
+
+
+  let finalWeight = parseFloat((getData() + getDataEC() + getDataTrolley()).toFixed(3));
+
+  document.getElementById('resultTotal').innerHTML = "Total Weight  = " + finalWeight + " kg";
+
+  // if (previousData.lenggth != 0) {
+  //   document.getElementById('previousDataLine').innerHTML = "Previous Results Below -";
+  // }
+  //
+  // // for (var i = 0; i < previousData.length; i++) {
+  // //   var p = document.createElement("P"); // Create a <p> element
+  // //   p.innerHTML = previousData[i] "Kg"; // Insert text
+  // //   document.body.appendChild(p); // Append <p> to <body>
+  // // }
+
 
 }
