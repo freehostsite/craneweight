@@ -49,12 +49,14 @@ label {
 }
 
 .row {
-  margin: 0 2%;
+  padding: 0 2%;
   transform: scale(0.9);
 }
 
 .mainDiv {
   /* display: inline-block; */
+  margin: 0 auto;
+  width: auto;
   text-align: left;
 }
 
