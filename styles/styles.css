@@ -1,0 +1,55 @@
+
+body {
+  background: #7F00FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  font-family: Montserrat;
+  /* color: #4a47a3; */
+  /* color: #aa2b1d; */
+  color: #290149;
+}
+input {
+  width: 100px;
+  margin: 5px 20px;
+  border: 1px solid;
+  background: #C9D6FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+h1 {
+  font-weight: bold;
+}
+h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+p {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.header {
+  padding: 3% 0 0;
+}
+
+.row {
+  margin: 0 2%;
+  transform: scale(0.9);
+}
+
+.mainDiv {
+  /* display: inline-block; */
+  text-align: left;
+}
+
+.result {
+  margin-top: 8px;
+}

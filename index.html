@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <div class="header">
@@ -14,26 +14,26 @@
       <p><strong>Fill All Dimensions in mm</strong></p>
     </div>
 
-    <div>
+    <div class="row">
 
 
-    <div class="mainDiv">
+    <div class="col-lg-4 mainDiv">
       <form id="spanArea" method="post">
         <h2>Fill Dimensions of Beams</h2>
         <label >Enter Span         </label>
-        <input type="text" name="span" ><br>
+        <input type="text" name="span" placeholder="(in mm)" ><br>
         <label >Enter Height</label>
-        <input type="text" name="height" ><br>
+        <input type="text" name="height" placeholder="(in mm)" ><br>
         <label >Enter Width</label>
-        <input type="text" name="width" ><br>
+        <input type="text" name="width" placeholder="(in mm)" ><br>
         <label >Side Plate size</label>
-        <input type="text" name="sidePlate" value=""><br>
+        <input type="text" name="sidePlate" placeholder="(in mm)" value=""><br>
         <label >Top Plate</label>
-        <input type="text" name="topPlate" value=""><br>
+        <input type="text" name="topPlate" placeholder="(in mm)" value=""><br>
         <label >Bottom Plate</label>
-        <input type="text" name="bottomPlate" value=""><br>
+        <input type="text" name="bottomPlate" placeholder="(in mm)" value=""><br>
         <label >Square Size</label>
-        <input type="text" name="square" value=""><br>
+        <input type="text" name="square" placeholder="(in mm)" value=""><br>
         <label >No. of Beams</label>
         <input type="text" name="noOfBeams" value=""><br>
 
@@ -46,25 +46,25 @@
     </div>
 
 
-      <div class="mainDiv">
+      <div class="col-lg-4 mainDiv">
         <form id="ECArea" method="post">
           <h2>Fill Dimensions of End Carriages</h2>
           <label >Enter Span</label>
-          <input type="text" name="spanEC" ><br>
+          <input type="text" name="spanEC" placeholder="(in mm)" ><br>
           <label >Enter Height</label>
-          <input type="text" name="heightEC" ><br>
+          <input type="text" name="heightEC" placeholder="(in mm)" ><br>
           <label >Enter Width</label>
-          <input type="text" name="widthEC" ><br>
+          <input type="text" name="widthEC" placeholder="(in mm)" ><br>
           <label >Side Plate size</label>
-          <input type="text" name="sidePlateEC" value=""><br>
+          <input type="text" name="sidePlateEC" placeholder="(in mm)" value=""><br>
           <label >Top Plate</label>
-          <input type="text" name="topPlateEC" value=""><br>
+          <input type="text" name="topPlateEC" placeholder="(in mm)" value=""><br>
           <label >Bottom Plate</label>
-          <input type="text" name="bottomPlateEC" value=""><br>
+          <input type="text" name="bottomPlateEC" placeholder="(in mm)" value=""><br>
           <label >No. of End Carriages </label>
           <input type="text" name="noOfEC" value=""><br>
           <label >Wheel Center (optional)</label>
-          <input type="text" name="wheelDia" value=""><br>
+          <input type="text" name="wheelDia" placeholder="(in mm)" value=""><br>
 
 
           <button class="btn btn-dark" type="button" onclick="getDataEC()" name="button2">Calculate</button>
@@ -73,17 +73,17 @@
         <p id="resultEC" class="result">Total Weight of End Carriages will be shown here.</p>
       </div>
 
-      <div class="mainDiv">
+      <div id="trolleyDiv" class="col-lg-4 mainDiv">
         <form id="trolleyArea" method="post">
           <h2>Fill Dimensions of Trolley</h2>
           <label >Enter Length</label>
-          <input type="text" name="lengthTrolley" ><br>
+          <input type="text" name="lengthTrolley" placeholder="(in mm)" ><br>
           <label >Enter Width</label>
-          <input type="text" name="widthTrolley" ><br>
+          <input type="text" name="widthTrolley" placeholder="(in mm)" ><br>
           <label >Enter Channel Size</label>
-          <input type="text" name="channelTrolley" ><br>
+          <input type="text" name="channelTrolley" placeholder="(in mm)" ><br>
           <label >Chequered Plate size</label>
-          <input type="text" name="chqPlate" value=""><br>
+          <input type="text" name="chqPlate" placeholder="(in mm)" value=""><br>
 
           <button class="btn btn-dark" type="button" onclick="getDataTrolley()" name="button3">Calculate</button>
 
@@ -96,6 +96,6 @@
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="app.js" charset="utf-8"></script>
+      <script src="js/app.js" charset="utf-8"></script>
   </body>
 </html>
