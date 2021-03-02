@@ -1,6 +1,6 @@
 // For Previous Results
 
-// let previousData = [];
+let previousData = [];
 
 // Calculations for Beams
 
@@ -9,7 +9,8 @@ function getData() {
   // Data Collecting
 
   let data = $("#spanArea").serializeArray();
-  let span = Number(data[0].value)
+  let span = Number(document.querySelector("#span_v").value);
+  // let span = Number(data[0].value)
   let height = Number(data[1].value)
   let width = Number(data[2].value)
   let sidePlate = Number(data[3].value)
@@ -146,34 +147,35 @@ function getDataTrolley() {
 
 }
 
-function finalWeight() {
+function finalWeight(x) {
 
   // For Previous Results
 
-  // if (getData() != 0) {
-  //   previousData.push(getData())
-  // }
-  // if (getDataEC() != 0) {
-  //   previousData.push(getDataEC())
-  // }
-  // if (getDataTrolley() != 0) {
-  //   previousData.push(getDataTrolley())
-  // }
+  if (x == 1) {
+    previousData.unshift(getData())
+  }
+  if (x == 2) {
+    previousData.unshift(getDataEC())
+  }
+  if (x == 3) {
+    previousData.unshift(getDataTrolley())
+  }
 
 
   let finalWeight = parseFloat((getData() + getDataEC() + getDataTrolley()).toFixed(3));
 
   document.getElementById('resultTotal').innerHTML = "Total Weight  = " + finalWeight + " kg";
 
-  // if (previousData.lenggth != 0) {
-  //   document.getElementById('previousDataLine').innerHTML = "Previous Results Below -";
-  // }
-  //
-  // // for (var i = 0; i < previousData.length; i++) {
-  // //   var p = document.createElement("P"); // Create a <p> element
-  // //   p.innerHTML = previousData[i] "Kg"; // Insert text
-  // //   document.body.appendChild(p); // Append <p> to <body>
-  // // }
+  if (previousData.lenggth != 0) {
+    document.getElementById('previousDataLine').innerHTML = "Previous Results Below -";
+  }
+
+  for (var i = 0; i < previousData.length && i<5; i++) {
+    document.getElementById(i+1).innerHTML = i+1 + ") " + previousData[i] + "Kg";
+    // var p = document.createElement("P"); // Create a <p> element
+    // p.innerHTML = previousData[i] "Kg"; // Insert text
+    // document.body.appendChild(p); // Append <p> to <body>
+  }
 
 
 }
