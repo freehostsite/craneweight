@@ -7,8 +7,6 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   text-align: center;
   font-family: Montserrat;
-  /* color: #4a47a3; */
-  /* color: #aa2b1d; */
   color: #290149;
 }
 
@@ -30,17 +28,22 @@ h1 {
 
 h2 {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 24px;
+}
+
+strong {
+  text-decoration: underline;
+  font-size: 16px;
 }
 
 p {
-  font-weight: bold;
-  text-decoration: underline;
+  font-weight: 900;
+  font-size: 16px;
 }
 
 label {
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 19px;
   line-height: 2.09
 }
 
@@ -56,7 +59,7 @@ label {
 .mainDiv {
   /* display: inline-block; */
   margin: 0 auto;
-  width: auto;
+  /* width: auto; */
   text-align: left;
 }
 
@@ -73,6 +76,15 @@ label {
 }
 
 @media (max-width: 990px) {
+
+  /* .row {
+    width: auto;
+  }
+
+  .mainDiv {
+    width: auto;
+  } */
+
   .header {
     width: 540px;
     text-align: left;

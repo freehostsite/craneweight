@@ -149,16 +149,20 @@ function getDataTrolley() {
 
 function finalWeight(x) {
 
+
   // For Previous Results
 
   if (x == 1) {
-    previousData.unshift(getData())
+    append(previousData, getData())
+    previousData.push("Beam Weight")
   }
   if (x == 2) {
-    previousData.unshift(getDataEC())
+    append(previousData, getDataEC())
+    previousData.push("End Carriage Weight")
   }
   if (x == 3) {
-    previousData.unshift(getDataTrolley())
+    append(previousData, getDataTrolley())
+    previousData.push("Trolley Weight")
   }
 
 
@@ -170,12 +174,21 @@ function finalWeight(x) {
     document.getElementById('previousDataLine').innerHTML = "Previous Results Below -";
   }
 
-  for (var i = 0; i < previousData.length && i<5; i++) {
-    document.getElementById(i+1).innerHTML = i+1 + ") " + previousData[i] + "Kg";
-    // var p = document.createElement("P"); // Create a <p> element
-    // p.innerHTML = previousData[i] "Kg"; // Insert text
-    // document.body.appendChild(p); // Append <p> to <body>
+
+
+  for (var i = 0; i < previousData.length; i+=2) {
+    document.getElementById(i / 2).innerHTML = ((previousData.length - i) / 2) + ") " + previousData[i + 1] + " = " + previousData[i] + "Kg";
   }
-
-
 }
+
+// Item ADD and Remove
+
+function append(array, item) {
+  if (array.length < 10) {
+    array.push(item)
+  } else {
+    array.shift()
+    array.shift()
+    array.push(item)
+  }
+};
