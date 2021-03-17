@@ -177,7 +177,7 @@ function finalWeight(x) {
 
 
   for (var i = 0; i < previousData.length; i+=2) {
-    document.getElementById(i / 2).innerHTML = ((previousData.length - i) / 2) + ") " + previousData[i + 1] + " = " + previousData[i] + "Kg";
+    document.getElementById(i / 2).innerHTML = ((previousData.length - i) / 2) + ") " + previousData[i + 1] + " = " + previousData[i] + " kg";
   }
 }
 
