@@ -179,6 +179,15 @@ function finalWeight(x) {
   for (var i = 0; i < previousData.length; i+=2) {
     document.getElementById(i / 2).innerHTML = ((previousData.length - i) / 2) + ") " + previousData[i + 1] + " = " + previousData[i] + " kg";
   }
+
+
+    var clearButton = document.getElementById("clearResult");
+    if (previousData.length != 0){
+      clearButton.style.display = "block";
+    } else {
+      clearButton.style.display = "none";
+    }
+
 }
 
 // Item ADD and Remove
@@ -192,3 +201,7 @@ function append(array, item) {
     array.push(item)
   }
 };
+
+function clearResults(){
+  $(".previous-results").html("");
+}

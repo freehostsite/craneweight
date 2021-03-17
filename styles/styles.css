@@ -90,6 +90,10 @@ label {
   margin-top: 8px;
 }
 
+#clearResult {
+  display: none;
+}
+
 @media (max-width: 990px) {
 
   /* .row {
