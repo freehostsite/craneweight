@@ -204,4 +204,5 @@ function append(array, item) {
 
 function clearResults(){
   $(".previous-results").html("");
+  previousData = [];
 }

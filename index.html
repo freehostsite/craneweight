@@ -13,7 +13,7 @@
 <body>
   <div class="header">
     <h1>CRANE MAC - Weight Calculations</h1>
-    <p><strong>Fill All Dimensions in mm</strong></p>
+    <!-- <p><strong>Fill All Dimensions in mm</strong></p> -->
   </div>
 
   <div class="row">
@@ -45,7 +45,7 @@
 
         <br>
 
-        <button class="btn btn-dark" type="button" onclick="getData();finalWeight(1)"name="button">Calculate</button><br>
+        <button class="btn btn-dark" type="button" onclick="getData();finalWeight(1)" name="button">Calculate</button><br>
 
       </form>
 
@@ -66,7 +66,7 @@
           <label>Bottom Plate</label><br>
           <label>No. of End Carriages </label><br>
 
-            <label>Wheel Center (optional)</label>
+          <label>Wheel Center (optional)</label>
         </div>
         <div class="input">
           <input type="number" name="spanEC" placeholder="(in mm)" autocomplete="off"><br>
@@ -113,20 +113,21 @@
       <p id="resultTrolley" class="result">Total Weight of Trolley will be shown here.</p>
     </div>
 
-    <div class="col-lg-4 mainDiv">
-      <p id="resultTotal" class="result"></p>
-      <p id="previousDataLine"></p>
-      <p id="4" class="result previous-results"></p>
-      <p id="3" class="result previous-results"></p>
-      <p id="2" class="result previous-results"></p>
-      <p id="1" class="result previous-results"></p>
-      <p id="0" class="result previous-results"></p>
-      <button type="button" id="clearResult" class="btn btn-dark btn-sm" onclick="clearResults()" name="button">Clear Results</button>
-    </div>
-
+    <!-- Code was here -->
 
   </div>
 
+
+  <div class="resultDiv">
+    <p id="resultTotal" class="result"></p>
+    <p id="previousDataLine"></p>
+    <p id="4" class="result previous-results"></p>
+    <p id="3" class="result previous-results"></p>
+    <p id="2" class="result previous-results"></p>
+    <p id="1" class="result previous-results"></p>
+    <p id="0" class="result previous-results"></p>
+    <button type="button" id="clearResult" class="btn btn-dark btn-sm" onclick="clearResults()" name="button">Clear Results</button>
+  </div>
 
 
 

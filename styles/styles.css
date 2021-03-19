@@ -1,11 +1,8 @@
 body {
-  background: #1c92d2;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background-color: #f9f3f3;
   text-align: center;
   font-family: Montserrat;
-  color: #290149;
+  color: #435560;
 }
 
 input {
@@ -62,20 +59,26 @@ label {
 }
 
 .header {
-  padding: 3% 0 0;
+  background-color: #252525;
+  padding: 2% 9% 1%;
+  text-align: left;
+  color: #dddddd;
 }
 
 .row {
-  padding: 0 2%;
-  transform: scale(0.9);
+  margin: 2% 9% 0;
+  /* padding: 0 2%; */
+  /* transform: scale(0.9); */
 }
 
 .mainDiv {
   /* display: inline-block; */
   /* margin: 0 auto; */
-  width: auto;
-  padding-left: 2.5%;
+  /* width: auto; */
+  /* padding-left: 2.5%; */
+  padding-left: 0;
   text-align: left;
+  /* border: 1px solid black; */
 }
 
 .label {
@@ -84,6 +87,11 @@ label {
 
 .input {
   display: inline-block;
+}
+
+.resultDiv {
+  margin: 0 9%;
+  text-align: left;
 }
 
 .result {
@@ -103,12 +111,12 @@ label {
   .mainDiv {
     width: auto;
   } */
-
   .header {
     width: 540px;
     text-align: left;
     margin-left: 6%;
   }
+
   .mainDiv {
     margin-left: 0;
   }
